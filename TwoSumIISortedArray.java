@@ -39,3 +39,44 @@ class Solution {
         return new int[]{};
     }
 }
+
+class Solution {
+    public int[] twoSum(int[] numbers, int target) {
+        int i=0;
+        int j=0;
+        for(i=0;i<numbers.length-1;i++){
+            for(j=i+1;j<numbers.length;j++){
+                if(numbers[i]+numbers[j]==target){
+                    break;
+                }
+            }
+            if(j<numbers.length){
+                break;
+            }
+        }
+        return new int []{i+1,j+1};
+    }
+}
+
+// Time Complexity: O(n²)
+// Space Complexity: O(1)
+
+class Solution {
+    public int[] twoSum(int[] numbers, int target) {
+        int i = 0;
+        int j = 0;
+        for (i = 0; i < numbers.length - 1; i++) {
+            for (j = i + 1; j < numbers.length; j++) {
+                if (numbers[i] + numbers[j] == target) {
+                    break;
+                }
+            }
+            if (j < numbers.length) {
+                break;
+            }
+        }
+        return new int[]{i + 1, j + 1};
+    }
+}
+
+// You can avoid the second break by returning immediately when you find the answer
